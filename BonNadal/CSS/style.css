@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../fondo.jpg');
+    background-size: cover;
+    overflow: hidden;       /*ocula copos al sortir*/
+}
+
+/*Contenidor copos de nieve*/
+#copos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.copos {
+    position: absolute;
+    top: -10px;
+    color: white;
+    font-size: 10px;
+    opacity: 0.8;
+    animation: fall linear infinite;
+    text-shadow: 0 0 5px #fff;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+h2 {
+    text-align: center;
+}
+
+form {
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.input-wrapper {
+    margin-bottom: 15px;
+}
+
+.input-wrapper input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/*Estilo label*/
+form div.label-group {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; /* Espacio entre "Bon" y "Nadal" */
+}
+
+.label-group label {
+    margin: 0 10px; /* Espaciado horizontal entre las letras */
+    text-align: center; /* Centrar texto con checkbox */
+}
+
+label input[type="checkbox"] {
+    margin-top: 5px; /* Espaciado entre la letra y el checkbox */
+}
+
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffbb28;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+
