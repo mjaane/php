@@ -3,90 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Completa con HTML& CSS</title>
+    <title>Página Profesional</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="header">
-        <h1>Mi Página Web Profesional</h1>
+        <h1>Página Profesional</h1>
         <nav class="nav">
-            <a href="#">Inicio</a>
-            <a href="#">Nosotros</a>
-            <a href="#">Servicios</a>
-            <a href="#">Contacto</a>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Equipo</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
         </nav>
     </header>
 
     <section class="hero">
-        <h2>Explora el mundo con nosotros</h2>
-        <p>Descubre nuevos lugares, experiencias y conocimientos.</p>
+        <h2>Bienvenido a nuestra web</h2>
+        <a href="#" class="btn">Conócenos</a>
     </section>
 
-    <main class="container">
+    <section class="section-light">
+        <h2>Sobre Nosotros</h2>
+        <p>Somos una empresa dedicada a la innovación digital...</p>
+    </section>
 
-        <section class="about">
-            <h2>Sobre Nosotros</h2>
-            <p>Somos una empresa apasionada por la innovación y la creatividad en el desarrollo web.</p>
-            <img src="https://source.unsplash.com/500x300/?team" alt="Nuestro equipo">
-        </section>
-
-        <section class="services">
-            <h2>Nuestros Servicios</h2>
-            <div class="grid-container">
-                <div class="service">
-                    <img src="https://source.unsplash.com/300x200/?code" alt="Desarrollo Web">
-                    <h3>Desarrollo Web</h3>
-                    <p>Creación de sitios web modernos y funcionales.</p>
-                </div>
-                <div class="service">
-                    <img src="https://source.unsplash.com/300x200/?seo" alt="SEO">
-                    <h3>Optimización SEO</h3>
-                    <p>Mejoramos el posicionamiento en buscadores.</p>
-                </div>
-                <div class="service">
-                    <img src="https://source.unsplash.com/300x200/?marketing" alt="Marketing Digital">
-                    <h3>Marketing Digital</h3>
-                    <p>Estrategias para aumentar tu presencia online.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="testimonials">
-            <h2>Testimonios</h2>
-            <div class="testimonials-container">
-                <div class="testimonial">
-                    <p>"El mejor servicio que hemos recibido, increíble experiencia!"</p>
-                    <h4>- Juan Pérez</h4>
-                </div>
-                <div class="testimonial">
-                    <p>"Profesionales, creativos y eficientes. Recomendados 100%!"</p>
-                    <h4>- Ana López</h4>
-                </div>
-            </div>
-        </section>
-
-        <section class="form-section">
-            <h2>Contáctanos</h2>
-            <form>
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" placeholder="Escribe tu nombre" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" placeholder="Escribe tu correo" required>
-                
-                <label for="message">Mensaje:</label>
-                <textarea id="message" placeholder="Escribe tu mensaje" required></textarea>
-                
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-
-    </main>
+    <section class="section-dark">
+        <h2>Nuestros Servicios</h2>
+        <div class="section-grid">
+            <div class="grid-item">Diseño Web</div>
+            <div class="grid-item">Desarrollo Frontend</div>
+            <div class="grid-item">SEO y Marketing</div>
+        </div>
+    </section>
 
     <footer class="footer">
-        <p>© 2025 Mi Página Web - Todos los derechos reservados.</p>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">Inicio</a>
+                <a href="#">Servicios</a>
+                <a href="#">Equipo</a>
+                <a href="#">Contacto</a>
+            </div>
+    
+            <div class="footer-social">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <p>© 2025 Página Profesional | Todos los derechos reservados</p>
     </footer>
+    
+    <!-- Agregar FontAwesome para los iconos -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
 
 </body>
 </html>

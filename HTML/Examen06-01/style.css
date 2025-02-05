@@ -1,145 +1,260 @@
-/* Reset básico */
-body {
-    font-family: Arial, sans-serif;
+/* ====== RESET ====== */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Encabezado */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f4;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ====== HEADER ====== */
 .header {
     background: black;
     color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
+    padding: 20px;
+    text-align: center;
+    animation: slideDown 1s ease-in-out;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* ====== NAVEGACIÓN ====== */
+.nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.nav li {
+    display: inline;
+    margin: 0 15px;
 }
 
 .nav a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
 }
 
-/* Hero Section */
+.nav a:hover {
+    color: #ffcc00;
+}
+
+/* ====== HERO SECTION ====== */
 .hero {
-    text-align: center;
     background: url('https://media.istockphoto.com/id/517188688/es/foto/paisaje-de-monta%C3%B1a.jpg?s=612x612&w=0&k=20&c=EnSd5sJdxih_svZHscQ5Hfzr3RSOdXO9MpdmKK4CMTs=') no-repeat center/cover;
     color: white;
+    text-align: center;
     padding: 100px 20px;
-    font-size: 1.5em;
 }
 
-/* Contenedor principal */
-.container {
-    padding: 20px;
+.hero .btn {
+    background: white;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    transition: transform 0.3s ease-in-out, background 0.3s;
 }
 
-/* Sección Acerca de */
-.about {
+.hero .btn:hover {
+    transform: scale(1.1);
+    background: #ffcc00;
+}
+
+/* ====== SECCIONES ====== */
+section {
+    padding: 60px 20px;
+    margin: 40px auto;
+    max-width: 1200px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.section-light {
+    background: white;
+}
+
+.section-dark {
+    background: #2c3e50;
+    color: white;
+}
+
+section h2 {
     text-align: center;
-    padding: 20px;
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
-.about img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 10px;
+section h2::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background: #ffcc00;
+    display: block;
+    margin: 8px auto 0;
+    border-radius: 2px;
 }
 
-/* Grid Layout para servicios */
-.services {
-    text-align: center;
-    padding: 20px;
-}
-
-.grid-container {
+/* ====== GRID ====== */
+.section-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
-}
-
-.service {
     text-align: center;
-    background: #f9f9f9;
-    padding: 15px;
-    border-radius: 10px;
-    transition: transform 0.3s;
 }
 
-.service:hover {
+.grid-item {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.grid-item:hover {
     transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Testimonios */
-.testimonials {
-    text-align: center;
-    padding: 20px;
-    background: #f1f1f1;
-}
-
-.testimonials-container {
+/* ====== FLEXBOX ====== */
+.section-flex {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-}
-
-.testimonial {
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    width: 40%;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-/* Formulario */
-.form-section {
+    align-items: center;
     text-align: center;
-    padding: 30px;
-    background: #ececec;
 }
 
+.flex-item {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 300px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.flex-item:hover {
+    transform: scale(1.07) rotate(3deg);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* ====== FORMULARIO ====== */
 form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
     max-width: 400px;
     margin: auto;
+    gap: 10px;
 }
 
 input, textarea, button {
     padding: 10px;
-    font-size: 1em;
-    border: 1px solid #ccc;
+    border-radius: 5px;
+    border: 1px solid #ddd;
 }
 
 button {
     background: black;
     color: white;
     cursor: pointer;
+    transition: background 0.3s;
 }
 
-/* Footer */
+button:hover {
+    background: #ffcc00;
+}
+
+/* ====== FOOTER ====== */
 .footer {
-    text-align: center;
-    padding: 20px;
     background: black;
     color: white;
+    padding: 30px 20px;
+    text-align: center;
+    animation: slideUp 1s ease-in-out;
 }
 
-/* Media Queries (Responsive) */
-@media (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: repeat(1, 1fr);
-    }
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
 
-    .testimonials-container {
+/* Enlaces del footer */
+.footer-links a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+    color: #ffcc00;
+}
+
+/* Iconos de redes sociales */
+.footer-social a {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s ease-in-out, transform 0.2s;
+}
+
+.footer-social a:hover {
+    color: #ffcc00;
+    transform: scale(1.2);
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+    .section-flex {
         flex-direction: column;
         align-items: center;
     }
 
-    .testimonial {
-        width: 80%;
+    .section-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
     }
 }
+
+
+
+
+
+
+
