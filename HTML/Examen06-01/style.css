@@ -3,82 +3,143 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* Encabezado */
 .header {
-    background-color: black;
+    background: black;
     color: white;
-    padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.header h1 {
-    margin: 0;
-}
-
-.nav {
-    display: flex;
-    gap: 15px;
+    padding: 15px;
 }
 
 .nav a {
     color: white;
     text-decoration: none;
+    margin: 0 15px;
 }
 
-/* Contenedor principal con Flexbox */
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
-    gap: 20px;
-}
-
-/* Sección principal con imágenes */
-.content {
-    display: flex;
-    flex: 2;
-    gap: 20px;
-    justify-content: center;
-}
-
-.item {
+/* Hero Section */
+.hero {
     text-align: center;
-    flex: 1;
+    background: url('https://media.istockphoto.com/id/517188688/es/foto/paisaje-de-monta%C3%B1a.jpg?s=612x612&w=0&k=20&c=EnSd5sJdxih_svZHscQ5Hfzr3RSOdXO9MpdmKK4CMTs=') no-repeat center/cover;
+    color: white;
+    padding: 100px 20px;
+    font-size: 1.5em;
 }
 
-/* Barra lateral de ingredientes */
-.ingredients {
-    flex: 1;
-    padding-left: 20px;
+/* Contenedor principal */
+.container {
+    padding: 20px;
 }
 
-.ingredients ul {
-    list-style: none;
-    padding: 0;
+/* Sección Acerca de */
+.about {
+    text-align: center;
+    padding: 20px;
 }
 
-.ingredients li {
-    color: green;
+.about img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
 }
 
-/* Media Query para hacer la página responsive */
+/* Grid Layout para servicios */
+.services {
+    text-align: center;
+    padding: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.service {
+    text-align: center;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.service:hover {
+    transform: scale(1.05);
+}
+
+/* Testimonios */
+.testimonials {
+    text-align: center;
+    padding: 20px;
+    background: #f1f1f1;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.testimonial {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 40%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Formulario */
+.form-section {
+    text-align: center;
+    padding: 30px;
+    background: #ececec;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: auto;
+}
+
+input, textarea, button {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
+    color: white;
+}
+
+/* Media Queries (Responsive) */
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
     }
-    
-    .content {
+
+    .testimonials-container {
         flex-direction: column;
         align-items: center;
     }
 
-    .ingredients {
-        padding-left: 0;
-        text-align: center;
+    .testimonial {
+        width: 80%;
     }
 }

@@ -3,45 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Inspirada en LUSH</title>
+    <title>Web Completa con HTML& CSS</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header class="header">
-        <h1>LUSH Fresh Handmade Cosmetics</h1>
+        <h1>Mi Página Web Profesional</h1>
         <nav class="nav">
-            <a href="#">Products</a>
-            <a href="#">Shops</a>
-            <a href="#">#LushLabs</a>
-            <a href="#">Login</a>
+            <a href="#">Inicio</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Servicios</a>
+            <a href="#">Contacto</a>
         </nav>
     </header>
+
+    <section class="hero">
+        <h2>Explora el mundo con nosotros</h2>
+        <p>Descubre nuevos lugares, experiencias y conocimientos.</p>
+    </section>
+
     <main class="container">
-        <section class="content">
-            <div class="item">
-                <h2>Freshening and calming</h2>
-                <img src="https://via.placeholder.com/200" alt="Fresh Parsley">
-                <p><strong>Fresh Parsley</strong></p>
-            </div>
-            <div class="item">
-                <h2>Antibacterial</h2>
-                <img src="https://via.placeholder.com/200" alt="Tea Tree Infusion">
-                <p><strong>Tea Tree Infusion</strong></p>
+
+        <section class="about">
+            <h2>Sobre Nosotros</h2>
+            <p>Somos una empresa apasionada por la innovación y la creatividad en el desarrollo web.</p>
+            <img src="https://source.unsplash.com/500x300/?team" alt="Nuestro equipo">
+        </section>
+
+        <section class="services">
+            <h2>Nuestros Servicios</h2>
+            <div class="grid-container">
+                <div class="service">
+                    <img src="https://source.unsplash.com/300x200/?code" alt="Desarrollo Web">
+                    <h3>Desarrollo Web</h3>
+                    <p>Creación de sitios web modernos y funcionales.</p>
+                </div>
+                <div class="service">
+                    <img src="https://source.unsplash.com/300x200/?seo" alt="SEO">
+                    <h3>Optimización SEO</h3>
+                    <p>Mejoramos el posicionamiento en buscadores.</p>
+                </div>
+                <div class="service">
+                    <img src="https://source.unsplash.com/300x200/?marketing" alt="Marketing Digital">
+                    <h3>Marketing Digital</h3>
+                    <p>Estrategias para aumentar tu presencia online.</p>
+                </div>
             </div>
         </section>
-        <aside class="ingredients">
-            <h3>List of ingredients</h3>
-            <ul>
-                <li>Rapeseed Oil</li>
-                <li>Coconut Oil</li>
-                <li>Tea Tree Infusion</li>
-                <li>Fresh Aloe Gel</li>
-                <li>Fresh Parsley</li>
-                <li>Glycerine</li>
-                <li>Fine Ground Oatmeal</li>
-                <li>Thyme Oil</li>
-            </ul>
-        </aside>
+
+        <section class="testimonials">
+            <h2>Testimonios</h2>
+            <div class="testimonials-container">
+                <div class="testimonial">
+                    <p>"El mejor servicio que hemos recibido, increíble experiencia!"</p>
+                    <h4>- Juan Pérez</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"Profesionales, creativos y eficientes. Recomendados 100%!"</p>
+                    <h4>- Ana López</h4>
+                </div>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2>Contáctanos</h2>
+            <form>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" placeholder="Escribe tu nombre" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Escribe tu correo" required>
+                
+                <label for="message">Mensaje:</label>
+                <textarea id="message" placeholder="Escribe tu mensaje" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
     </main>
+
+    <footer class="footer">
+        <p>© 2025 Mi Página Web - Todos los derechos reservados.</p>
+    </footer>
+
 </body>
 </html>
