@@ -1,0 +1,209 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+}
+
+.spinner-container {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    animation: fadeOut 2s ease-in-out 2s forwards;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #b11010;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.menu {
+    width: 250px;
+    height: 100vh;
+    background-color: #b11010;
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+    z-index: 10;
+}
+
+
+.logo {
+    width: 190px;
+    filter: invert(1);
+    position: absolute;
+    top: 30px;
+    left: 40px;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    
+}
+
+nav ul li {
+    margin: 20px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.reserve-btn {
+    margin-top: 190px; /* 🔽 Bajamos el botón */
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.reserve-btn:hover {
+    background-color: white;
+    color: #b11010;
+}
+
+.car {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+.text-overlay {
+    position: absolute;
+    top: 30%;
+    left: 55%;
+    transform: translateX(-50%);
+    font-size: 55px;
+    font-weight: bold;
+    color: rgb(251, 251, 251);
+    text-align: center;
+    z-index: 5;
+}
+
+
+.specs {
+    position: absolute;
+    bottom: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 120px;
+    color: rgb(255, 255, 255);
+}
+
+.spec h2 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.spec p {
+    font-size: 14px;
+    font-style: italic;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+@media (max-width: 1024px) {
+    .menu {
+        width: 200px;
+        padding-left: 30px;
+    }
+    
+    .logo {
+        width: 60px;
+    }
+    
+    .text-overlay {
+        font-size: 45px;
+        top: 25%;
+        left: 50%;
+    }
+
+    .specs {
+        flex-direction: column;
+        gap: 20px;
+        bottom: 10%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .menu {
+        width: 180px;
+        padding-left: 20px;
+    }
+
+    .logo {
+        width: 50px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .text-overlay {
+        font-size: 35px;
+        top: 27%;
+        left: 70%;
+    }
+
+    .specs {
+        flex-direction: column;
+        gap: 15px;
+        bottom: 8%;
+        left: 70%;
+    }
+
+    .reserve-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
