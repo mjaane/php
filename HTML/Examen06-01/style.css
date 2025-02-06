@@ -258,3 +258,36 @@ button:hover {
 
 
 
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    animation: move-right 4s ease-out forwards;
+}
+
+.spinner {
+    width: 200px;
+    height: 200px;
+    border: 5px solid black;
+    border-left-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.1s linear infinite;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes move-right {
+    from {
+        left: 0;
+    }
+    to {
+        left: 80%;
+    }
+}
